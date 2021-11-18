@@ -1,0 +1,20 @@
+{
+  "v": "1.1",
+  "method": "post",
+  "url": "https://postman-echo.com/post",
+  "headers": {
+    "accept": "*/*",
+    "accept-encoding": "gzip, deflate, br",
+    "accept-language": "en-US,en;q=0.9,ru;q=0.8",
+    "content-Type": "application/json",
+    "connection": "keep-alive",
+    "sec-ch-ua": "\"Google Chrome\";v=\"95\", \"Chromium\";v=\"95\", \";Not A Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "Linux",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site",
+    "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36"
+  },
+  "body": "{\"say\": \"Hi\",\"to\": \"Mom\"}"
+}
