@@ -44,8 +44,11 @@ public class HttpClientBasedOnRestAssured implements HttpClient {
             Objects.requireNonNull(requestService);
             return doRequest(requestService.parse(jsonString));
         } catch (JsonParseException | NullPointerException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
             throw new HttpRequestException("Error: couldn't parse message", e.getCause());
+        } catch (Exception e) {
+            log.error(e.toString());
+            throw new HttpRequestException("Error: make http request", e.getCause());
         }
     }
 
@@ -107,7 +110,14 @@ public class HttpClientBasedOnRestAssured implements HttpClient {
         rc.headers(httpRequest.headers().map());
         httpRequest.params().ifPresent(rc::params);
 
-        Response response = rc.get(httpRequest.uri());
+        Response response;
+        try {
+            response = rc.get(httpRequest.uri());
+        } catch (Exception e) {
+            e.printStackTrace();
+            log.error(e.getMessage());
+            return null;
+        }
         return toHttpResponse(response);
     }
 
