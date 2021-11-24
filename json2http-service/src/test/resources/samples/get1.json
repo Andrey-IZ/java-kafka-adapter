@@ -1,7 +1,7 @@
 {
   "v": "1.1",
   "method": "get",
-  "url": "https://postman-echo.com/get",
+  "url": "http://postman-echo.com/get",
   "params": {
     "foo1": "bar1",
     "foo2": "bar2"

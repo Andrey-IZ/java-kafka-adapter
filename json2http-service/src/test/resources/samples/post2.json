@@ -1,7 +1,7 @@
 {
   "v": "1.1",
   "method": "post",
-  "url": "https://postman-echo.com/post",
+  "url": "http://postman-echo.com/post",
   "headers": {
     "accept": "*/*",
     "accept-encoding": "gzip, deflate, br",
