@@ -13,16 +13,12 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.URI;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class JsonToHttpRequestServiceImplGetTest {
+public class JsonToHttpRequestServiceImplGetTest {
 
     private static String jsonGet;
     private static ObjectMapper mapper;
@@ -58,20 +54,6 @@ class JsonToHttpRequestServiceImplGetTest {
                 "    \"user-agent\": \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36\"\n" +
                 "  }\n" +
                 "}";
-    }
-
-    private static String loadFile(String fileName) throws IOException {
-        var classloader = Thread.currentThread().getContextClassLoader();
-        var is = classloader.getResourceAsStream(fileName);
-        List<String> lines = new ArrayList<>();
-        if (is == null)
-            return String.join("", lines);
-        var streamReader = new InputStreamReader(is, StandardCharsets.UTF_8);
-        BufferedReader reader = new BufferedReader(streamReader);
-        for (String line; (line = reader.readLine()) != null; ) {
-            lines.add(line);
-        }
-        return String.join("", lines);
     }
 
     @BeforeEach

@@ -10,7 +10,7 @@ import java.util.TreeMap;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class JsonMessageTest {
+public class JsonMessageTest {
 
     @BeforeEach
     void setUp() {
