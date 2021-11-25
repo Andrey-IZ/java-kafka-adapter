@@ -55,7 +55,7 @@
         </dependency>
         <!-- dependency on our service        -->
         <dependency>
-            <groupId>com.sber.javaschool.finalproject.json2http</groupId>
+            <groupId>com.sber.javaschool.finalproject</groupId>
             <artifactId>json2http-service</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
