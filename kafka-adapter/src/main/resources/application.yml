@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: kafka-rest
+  profiles:
+    active: dev
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+      group-id: group_id
