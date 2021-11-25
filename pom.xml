@@ -11,7 +11,7 @@
 
     <modules>
         <module>json2http-service</module>
-        <module>kafka</module>
+        <module>kafka-adapter</module>
         <module>rest-service</module>
     </modules>
 

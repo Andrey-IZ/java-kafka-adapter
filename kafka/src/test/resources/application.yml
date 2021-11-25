@@ -1,8 +1,0 @@
-spring:
-  kafka:
-    consumer:
-      #      bootstrap-servers: ${spring.embedded.kafka.brokers}
-      auto-offset-reset: earliest
-      group-id: group_id
-test:
-  topic: embedded-test-topic
